@@ -18,5 +18,8 @@ export class PageComponent {
     // Lógica para navegar para a página de login
     this.router.navigate(['/login']);
   }
+  editarInfluenciador(){
+
+  }
 
 }
