@@ -1,16 +1,9 @@
 <div class="container">
     <h1>Bem-vindo(a) à Página de Influenciadores</h1>
-    <div class="data-list">
-      <h2>Lista de Influenciadores</h2>
-  
-      <ul>
-        <li>
-          {{ influenciador.nome }} - {{ influenciador.quantidadeInscritos }} inscritos
-          <button>Editar</button>
-        </li>
-      </ul>
+    <p>Aqui você pode fazer o cadastro ou login.</p>
+    <div class="button-container">
+      <button class="button" (click)="irParaCadastro()">Cadastro</button>
+      <button class="button" (click)="irParaLogin()">Login</button>
     </div>
-  
-    <button class="button" (click)="irParaCadastro()">Cadastro</button>
   </div>
   
