@@ -1,19 +1,44 @@
-import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
+import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
-
-
 
 @Injectable({
   providedIn: 'root'
 })
 export class ServicesService {
-  SERVER_URL = 'http://localhost:8081';
+  private SERVER_URL = 'http://localhost:8081';
 
   constructor(private http: HttpClient) { }
 
-    //rota para visualizar lista de produtos de estoque pelo supermercado
-    public getProducts(): Observable<any[]> {
-      return this.http.get<any[]>(`${this.SERVER_URL}/api/products`);
-    }
+  // Outros métodos do serviço...
+
+  // Rota para visualizar todas as pessoas cadastradas
+  public getAllPeople(): Observable<any[]> {
+    return this.http.get<any[]>(`${this.SERVER_URL}/customers`);
+  }
+
+  // Rota para visualizar uma pessoa cadastrada por ID
+  public getPersonById(id: string): Observable<any> {
+    return this.http.get<any>(`${this.SERVER_URL}/customers/${id}`);
+  }
+
+  // Rota para cadastrar uma pessoa
+  public createPerson(personData: any): Observable<any> {
+    return this.http.post<any>(`${this.SERVER_URL}/customers`, personData);
+  }
+
+  // Rota para atualizar dados de uma pessoa
+  public updatePersonById(id: string, updatedData: any): Observable<any> {
+    return this.http.put<any>(`${this.SERVER_URL}/customers/${id}`, updatedData);
+  }
+
+  // Rota para excluir uma pessoa
+  public deletePersonById(id: string): Observable<any> {
+    return this.http.delete<any>(`${this.SERVER_URL}/customers/${id}`);
+  }
+
+  // Rota para fazer login e obter token de autenticação
+  public login(credentials: any): Observable<any> {
+    return this.http.post<any>(`${this.SERVER_URL}/login`, credentials);
+  }
 }
