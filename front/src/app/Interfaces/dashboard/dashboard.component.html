@@ -1,56 +1,55 @@
 <div class="dashboard">
-    <h1>Painel de Controle</h1>
-  
-    <div class="form-container">
-      <h2>Cadastrar Influenciador</h2>
-      <form [formGroup]="cadastroForm" (ngSubmit)="cadastrarInfluenciador()">
-        <div class="form-group">
-          <label for="nome">Nome:</label>
-          <input type="text" id="nome" formControlName="nome" required>
-        </div>
-  
-        <div class="form-group">
-          <label for="categoria">Categoria:</label>
-          <input type="text" id="categoria" formControlName="categoria" required>
-        </div>
-  
-        <div class="form-group">
-          <label for="inscritos">Inscritos:</label>
-          <input type="number" id="inscritos" formControlName="inscritos" required>
-        </div>
-  
-        <button type="submit">Cadastrar</button>
-      </form>
-    </div>
-  
-    <div class="filter-container">
-      <h2>Filtrar Influenciadores</h2>
+  <h1 class="dashboard-title">Painel de Controle</h1>
+
+  <div class="form-container">
+    <h2 class="form-title">Cadastrar Influenciador</h2>
+    <form [formGroup]="cadastroForm" (ngSubmit)="cadastrarInfluenciador()">
       <div class="form-group">
-        <label for="filtroNome">Nome:</label>
-        <input type="text" id="filtroNome" [(ngModel)]="filtroNome">
+        <label for="nome">Nome:</label>
+        <input type="text" id="nome" formControlName="nome" required>
       </div>
-  
+
       <div class="form-group">
-        <label for="filtroCategoria">Categoria:</label>
-        <input type="text" id="filtroCategoria" [(ngModel)]="filtroCategoria">
+        <label for="categoria">Categoria:</label>
+        <input type="text" id="categoria" formControlName="categoria" required>
       </div>
-  
+
       <div class="form-group">
-        <label for="filtroInscritos">Inscritos:</label>
-        <input type="number" id="filtroInscritos" [(ngModel)]="filtroInscritos">
+        <label for="inscritos">Inscritos:</label>
+        <input type="number" id="inscritos" formControlName="inscritos" required>
       </div>
-  
-      <button (click)="filtrarInfluenciadores()">Filtrar</button>
-    </div>
-  
-    <div class="influenciadores-list">
-      <h2>Lista de Influenciadores</h2>
-      <ul>
-        <li *ngFor="let influenciador of influenciadores">
-          <span>{{ influenciador.nome }} - {{ influenciador.categoria }} - {{ influenciador.inscritos }} inscritos</span>
-          <button (click)="editarInfluenciador(influenciador)">Editar</button>
-        </li>
-      </ul>
-    </div>
+
+      <button type="submit" class="btn-submit">Cadastrar</button>
+    </form>
   </div>
-  
+
+  <div class="filter-container">
+    <h2 class="filter-title">Filtrar Influenciadores</h2>
+    <div class="form-group">
+      <label for="filtroNome">Nome:</label>
+      <input type="text" id="filtroNome" [(ngModel)]="filtroNome" class="form-control">
+    </div>
+
+    <div class="form-group">
+      <label for="filtroCategoria">Categoria:</label>
+      <input type="text" id="filtroCategoria" [(ngModel)]="filtroCategoria" class="form-control">
+    </div>
+
+    <div class="form-group">
+      <label for="filtroInscritos">Inscritos:</label>
+      <input type="number" id="filtroInscritos" [(ngModel)]="filtroInscritos" class="form-control">
+    </div>
+
+    <button (click)="filtrarInfluenciadores()" class="btn-filter">Filtrar</button>
+  </div>
+
+  <div class="influenciadores-list">
+    <h2 class="list-title">Lista de Influenciadores</h2>
+    <ul>
+      <li *ngFor="let influenciador of influenciadores">
+        <span>{{ influenciador.nome }} - {{ influenciador.categoria }} - {{ influenciador.inscritos }} inscritos</span>
+        <button (click)="editarInfluenciador(influenciador)" class="btn-edit">Editar</button>
+      </li>
+    </ul>
+  </div>
+</div>
