@@ -19,7 +19,7 @@ router.get("/", verificarToken, controller.getAll)
 router.get("/:id", controller.getPeople)
 
 // DEMANDA: cadastrar uma Pessoa
-router.post("/", verificarToken, controller.createRegistration)
+router.post("/cadastro", verificarToken, controller.createRegistration)
 
 // DEMANDA: atualizar dados de uma Pessoa
 router.put("/:id", controller.updatePeopleById)
