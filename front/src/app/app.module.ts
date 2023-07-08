@@ -8,13 +8,15 @@ import { PageComponent } from './Interfaces/page/page.component';
 import { RegisterComponent } from './Interfaces/register/register.component';
 
 import { ReactiveFormsModule } from '@angular/forms';
+import { LoginComponent } from './Interfaces/login/login.component';
 
 
 @NgModule({
   declarations: [
     AppComponent,
     PageComponent,
-    RegisterComponent
+    RegisterComponent,
+    LoginComponent
   ],
   imports: [
     BrowserModule,
