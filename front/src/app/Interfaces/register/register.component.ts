@@ -31,7 +31,7 @@ export class RegisterComponent {
     }
   }
   fazerLogin(){
-    console.log('fazer login')
+    this.router.navigate(['/login'])
   }
   voltarPagina(){
     this.router.navigate(['/']);
