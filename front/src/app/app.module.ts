@@ -9,8 +9,9 @@ import { RegisterComponent } from './Interfaces/register/register.component';
 
 import { ReactiveFormsModule } from '@angular/forms';
 import { LoginComponent } from './Interfaces/login/login.component';
-import { DashboardComponent } from './interfaces/dashboard/dashboard.component';
+import { DashboardComponent } from './Interfaces/dashboard/dashboard.component';
 
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -18,12 +19,14 @@ import { DashboardComponent } from './interfaces/dashboard/dashboard.component';
     PageComponent,
     RegisterComponent,
     LoginComponent,
-    DashboardComponent
+    DashboardComponent,
+  
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
