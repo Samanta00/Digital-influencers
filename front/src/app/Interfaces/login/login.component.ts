@@ -24,7 +24,7 @@ export class LoginComponent implements OnInit {
     const email = this.loginForm.controls['email'].value;
     const senha = this.loginForm.controls['senha'].value;
 
-    if (email === 'exemplo@email.com' && senha === 'senha') {
+    if (email === '123' && senha === '123') {
       // Redirecionar para a página desejada após o login
       this.router.navigate(['/dashboard']);
     } else {
