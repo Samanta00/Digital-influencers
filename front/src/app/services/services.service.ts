@@ -41,4 +41,12 @@ export class ServicesService {
   public login(credentials: any): Observable<any> {
     return this.http.post<any>(`${this.SERVER_URL}/login`, credentials);
   }
+
+  filtrarRegistros(nome: string, categoria: string, inscritos: number): Observable<any[]> {
+    // Implemente a lógica de filtragem aqui e faça a chamada HTTP adequada
+    // Retorne os resultados filtrados como um Observable<any[]>
+    // Exemplo:
+    const params = { nome, categoria, inscritos };
+    return this.http.get<any[]>(`${this.SERVER_URL}/customers/filtro`, { params });
+  }
 }
