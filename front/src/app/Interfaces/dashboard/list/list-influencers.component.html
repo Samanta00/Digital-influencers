@@ -1,1 +1,33 @@
-<p>list-influencers works!</p>
+<div class="filter-container">
+    <form [formGroup]="filtroForm" (ngSubmit)="filtrarRegistros()">
+      <div class="form-group">
+        <label for="nome">Nome:</label>
+        <input type="text" id="nome" formControlName="nome" class="form-control">
+      </div>
+  
+      <div class="form-group">
+        <label for="categoria">Categoria:</label>
+        <select id="categoria" formControlName="categoria" class="form-control">
+          <option value="" disabled selected>Selecione uma categoria</option>
+          <option value="Vlog">Vlog</option>
+          <option value="Review">Review</option>
+        </select>
+      </div>
+  
+      <div class="form-group">
+        <label for="inscritos">Número de Inscritos:</label>
+        <input type="number" id="inscritos" formControlName="inscritos" class="form-control">
+      </div>
+  
+      <button type="submit" class="btn-filter">Filtrar</button>
+      <button type="button" class="btn-reset" (click)="resetFiltro()">Limpar Filtro</button>
+    </form>
+  </div>
+  
+  <div class="registros-container">
+    <h2>Registros</h2>
+    <ul>
+      <li *ngFor="let registro of registros">{{ registro.nome }} - {{ registro.categoria }} - {{ registro.inscritos }}</li>
+    </ul>
+  </div>
+  
