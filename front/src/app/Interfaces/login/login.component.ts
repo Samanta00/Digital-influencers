@@ -10,12 +10,13 @@ import { Router } from '@angular/router';
 })
 export class LoginComponent implements OnInit {
   loginForm!: FormGroup;
+  authService: any;
 
   constructor(private formBuilder: FormBuilder, private http: HttpClient, private router: Router) { }
 
   ngOnInit() {
     this.loginForm = this.formBuilder.group({
-      email: ['', Validators.required],
+      email: ['', [Validators.required, Validators.email]],
       senha: ['', Validators.required]
     });
   }
@@ -30,14 +31,21 @@ export class LoginComponent implements OnInit {
         (data) => {
           // Armazene o token retornado pela API
           const token = data.token;
-          // Salve o token em localStorage ou em algum serviço de autenticação
-          localStorage.setItem('token', token);
-          // Redirecione para a página desejada após o login
-          this.router.navigate(['/dashboard']);
+          this.authService.setToken(token);
+          if(email=='ellen' && senha=='123'){
+            this.router.navigate(['/dashboard']);
+          }
+        
+  
         },
         (error) => {
-          // Lógica de tratamento de erro ou exibição de mensagem de login inválido
-          console.error(error);
+          if (error.status === 401) {
+            // Login inválido
+            console.error('Credenciais inválidas');
+          } else {
+            // Outros erros
+            console.error('Erro ao fazer login:', error);
+          }
         }
       );
   }
