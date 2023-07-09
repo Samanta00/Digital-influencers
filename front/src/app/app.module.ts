@@ -17,6 +17,7 @@ import { CreateInfluencersComponent } from './Interfaces/dashboard/create/create
 import { ListInfluencersComponent } from './Interfaces/dashboard/list/list-influencers.component';
 import { EditInfluencersComponent } from './Interfaces/dashboard/edit/edit-influencers.component';
 import { FilterInfluencersComponent } from './Interfaces/dashboard/filter/filter-influencers.component';
+import { DashboardtemplateComponent } from './Interfaces/dashboard/menu/dashboardtemplate.component';
 
 
 @NgModule({
@@ -29,6 +30,7 @@ import { FilterInfluencersComponent } from './Interfaces/dashboard/filter/filter
     ListInfluencersComponent,
     EditInfluencersComponent,
     FilterInfluencersComponent,
+    DashboardtemplateComponent,
   
   ],
   imports: [
