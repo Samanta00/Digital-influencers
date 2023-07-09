@@ -6,19 +6,19 @@ const dataSchema = new mongoose.Schema({
         type: String,
         required: true
     },
-    email: {
+    quantiaInscritos: {
         type: String,
         required: true
     },
-    telefone: {
+    canal: {
         type: String,
         required: true
     },
-    endereco: {
+    plataforma: {
         type: String,
         required: true
     },
-    cpf: {
+    categoriaConteudo: {
         type: String,
         required: true
     }
