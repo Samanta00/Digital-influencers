@@ -13,11 +13,9 @@ export class RegisterComponent {
 
   constructor(private formBuilder: FormBuilder, private router: Router) {
     this.cadastroForm = this.formBuilder.group({
+      email: ['', [Validators.required, Validators.email]],
       nome: ['', Validators.required],
-      quantidadeInscritos: ['', Validators.required],
-      canal: ['', Validators.required],
-      plataforma: ['', Validators.required],
-      categoriaConteudo: ['', Validators.required]
+      senha: ['', Validators.required]
     });
   }
 
