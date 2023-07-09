@@ -9,10 +9,14 @@ import { RegisterComponent } from './Interfaces/register/register.component';
 
 import { ReactiveFormsModule } from '@angular/forms';
 import { LoginComponent } from './Interfaces/login/login.component';
-import { DashboardComponent } from './Interfaces/dashboard/dashboard.component';
+
 
 import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
+import { CreateInfluencersComponent } from './Interfaces/dashboard/create-influencers/create-influencers.component';
+import { ListInfluencersComponent } from './Interfaces/dashboard/list-influencers/list-influencers.component';
+import { EditInfluencersComponent } from './Interfaces/dashboard/edit-influencers/edit-influencers.component';
+import { FilterInfluencersComponent } from './Interfaces/dashboard/filter-influencers/filter-influencers.component';
 
 
 @NgModule({
@@ -21,7 +25,10 @@ import { HttpClientModule } from '@angular/common/http';
     PageComponent,
     RegisterComponent,
     LoginComponent,
-    DashboardComponent,
+    CreateInfluencersComponent,
+    ListInfluencersComponent,
+    EditInfluencersComponent,
+    FilterInfluencersComponent,
   
   ],
   imports: [
