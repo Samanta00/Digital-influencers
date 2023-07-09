@@ -13,10 +13,10 @@ import { LoginComponent } from './Interfaces/login/login.component';
 
 import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
-import { CreateInfluencersComponent } from './Interfaces/dashboard/create-influencers/create-influencers.component';
-import { ListInfluencersComponent } from './Interfaces/dashboard/list-influencers/list-influencers.component';
-import { EditInfluencersComponent } from './Interfaces/dashboard/edit-influencers/edit-influencers.component';
-import { FilterInfluencersComponent } from './Interfaces/dashboard/filter-influencers/filter-influencers.component';
+import { CreateInfluencersComponent } from './Interfaces/dashboard/create/create-influencers.component';
+import { ListInfluencersComponent } from './Interfaces/dashboard/list/list-influencers.component';
+import { EditInfluencersComponent } from './Interfaces/dashboard/edit/edit-influencers.component';
+import { FilterInfluencersComponent } from './Interfaces/dashboard/filter/filter-influencers.component';
 
 
 @NgModule({
