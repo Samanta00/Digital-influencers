@@ -55,4 +55,8 @@ setToken(token: string) {
     const params = { nome, categoria, inscritos };
     return this.http.get<any[]>(`${this.SERVER_URL}/customers/filtro`, { params });
   }
+  isAuthenticated(): boolean {
+    return this.token !== ''; // Verifica se o token está presente
+  }
+  
 }
