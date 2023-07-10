@@ -17,6 +17,7 @@ import { EditInfluencersComponent } from './Interfaces/dashboard/edit/edit-influ
 import { FilterInfluencersComponent } from './Interfaces/dashboard/filter/filter-influencers.component';
 import { DashboardtemplateComponent } from './Interfaces/dashboard/menu/dashboardtemplate.component';
 
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -28,6 +29,7 @@ import { DashboardtemplateComponent } from './Interfaces/dashboard/menu/dashboar
     EditInfluencersComponent,
     FilterInfluencersComponent,
     DashboardtemplateComponent,
+    
   ],
   imports: [
     BrowserModule,
