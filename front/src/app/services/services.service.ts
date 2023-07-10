@@ -6,7 +6,13 @@ import { Observable } from 'rxjs';
   providedIn: 'root'
 })
 export class ServicesService {
-  private SERVER_URL = 'http://localhost:8081';
+  private SERVER_URL = 'http://localhost:8081/auth';
+  private token: string = '';
+
+setToken(token: string) {
+  this.token = token;
+}
+
 
   constructor(private http: HttpClient) { }
 
