@@ -39,31 +39,31 @@ export const getPeople = async (req: Request, res: Response) => {
 // criar método para cadastrar uma Pessoa 
 export const createRegistration = async (req: Request, res: Response) => {
     try {
-        const { nome, email, telefone, endereco, cpf } = req.body
+        const { nome, quantiaInscritos, canal, plataforma, categoriaConteudo } = req.body
 
         if (!nome.trim() || nome == undefined || nome.length <= 1 || nome == "") {
             console.log('Nome está sendo Passado indefinidamente.')
         }
-        else if (!email.trim() || email == undefined || email.length <= 5 || email.includes("@") == false || email == "") {
+        else if (!quantiaInscritos.trim() || quantiaInscritos == undefined || quantiaInscritos.length < 0 || quantiaInscritos == "") {
             console.log('email esta sendo passado indefinidamente.')
         }
-        else if (!telefone.trim() || telefone == undefined || telefone.length < 10 || telefone == "") {
+        else if (!canal.trim() || canal == undefined || canal.length < 1 || canal == "") {
             console.log('Telefone está sendo Passado indefinidamente.')
         }
-        else if (!endereco.trim() || endereco == undefined || endereco.length < 5 || endereco == "") {
+        else if (!plataforma.trim() || plataforma == undefined || plataforma.length < 5 || plataforma == "") {
             console.log('Endereço está sendo passado indefinidamente.')
         }
-        else if (!cpf.trim() || cpf == undefined || cpf.length < 11 || cpf == "") {
+        else if (!categoriaConteudo.trim() || categoriaConteudo == undefined || categoriaConteudo.length < 11 || categoriaConteudo == "") {
             console.log('CPF está sendo passado indefinidamente.')
         }
 
         else {
             const newNote = new dataSchema({
                 nome: nome,
-                email: email,
-                telefone: telefone,
-                endereco: endereco,
-                cpf: cpf,
+                quantiaInscritos: quantiaInscritos,
+                canal: canal,
+                plataforma: plataforma,
+                categoriaConteudo: categoriaConteudo,
                 _id: new mongoose.Types.ObjectId()
             })
 
@@ -89,10 +89,10 @@ export const updatePeopleById = async (req: Request, res: Response) => {
 
         if (findPeople) {
             findPeople.nome = req.body.nome || findPeople.nome
-            findPeople.email = req.body.email || findPeople.email
-            findPeople.telefone = req.body.telefone || findPeople.telefone
-            findPeople.endereco = req.body.endereco || findPeople.endereco
-            findPeople.cpf = req.body.cpf || findPeople.cpf
+            findPeople.quantiaInscritos = req.body.quantiaInscritos || findPeople.quantiaInscritos
+            findPeople.canal = req.body.canal || findPeople.canal
+            findPeople.plataforma = req.body.plataforma || findPeople.plataforma
+            findPeople.categoriaConteudo = req.body.categoriaConteudo || findPeople.categoriaConteudo
 
         }
         const savedPeople = await findPeople.save()
