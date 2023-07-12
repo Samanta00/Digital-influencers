@@ -13,8 +13,6 @@ import { HttpClientModule } from '@angular/common/http';
 
 import { CreateInfluencersComponent } from './Interfaces/dashboard/create/create-influencers.component';
 import { ListInfluencersComponent } from './Interfaces/dashboard/list/list-influencers.component';
-import { EditInfluencersComponent } from './Interfaces/dashboard/edit/edit-influencers.component';
-import { FilterInfluencersComponent } from './Interfaces/dashboard/filter/filter-influencers.component';
 import { DashboardtemplateComponent } from './Interfaces/dashboard/menu/dashboardtemplate.component';
 
 
@@ -26,8 +24,6 @@ import { DashboardtemplateComponent } from './Interfaces/dashboard/menu/dashboar
     LoginComponent,
     CreateInfluencersComponent,
     ListInfluencersComponent,
-    EditInfluencersComponent,
-    FilterInfluencersComponent,
     DashboardtemplateComponent,
     
   ],
