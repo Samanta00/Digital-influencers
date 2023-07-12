@@ -6,8 +6,8 @@ const dataSchema = new mongoose.Schema({
         type: String,
         required: true
     },
-    quantiaInscritos: {
-        type: String,
+    quantidadeInscritos: {
+        type: Number,
         required: true
     },
     canal: {
@@ -22,7 +22,6 @@ const dataSchema = new mongoose.Schema({
         type: String,
         required: true
     }
+});
 
-})
-
-module.exports = mongoose.model('data', dataSchema)
+module.exports = mongoose.model('Data', dataSchema);
