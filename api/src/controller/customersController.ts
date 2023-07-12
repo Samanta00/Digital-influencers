@@ -39,32 +39,29 @@ export const getPeople = async (req: Request, res: Response) => {
 // criar método para cadastrar uma Pessoa 
 export const createRegistration = async (req: Request, res: Response) => {
     try {
-        const { nome, quantiaInscritos, canal, plataforma, categoriaConteudo } = req.body
+        const { nome, quantidadeInscritos, canal, plataforma, categoriaConteudo } = req.body;
 
-        if (!nome.trim() || nome == undefined || nome.length <= 1 || nome == "") {
-            console.log('Nome está sendo Passado indefinidamente.')
-        }
-        else if (!quantiaInscritos.trim() || quantiaInscritos == undefined || quantiaInscritos.length < 0 || quantiaInscritos == "") {
-            console.log('email esta sendo passado indefinidamente.')
-        }
-        else if (!canal.trim() || canal == undefined || canal.length < 1 || canal == "") {
-            console.log('Telefone está sendo Passado indefinidamente.')
-        }
-        else if (!plataforma.trim() || plataforma == undefined || plataforma.length < 5 || plataforma == "") {
-            console.log('Endereço está sendo passado indefinidamente.')
-        }
-        else if (!categoriaConteudo.trim() || categoriaConteudo == undefined || categoriaConteudo.length < 11 || categoriaConteudo == "") {
-            console.log('CPF está sendo passado indefinidamente.')
+        if (!nome.trim() || nome === undefined || nome.length <= 1 || nome === '') {
+          console.log('Nome está sendo passado indefinidamente.');
+        } else if (!quantidadeInscritos || quantidadeInscritos < 0) {
+          console.log('Quantidade de inscritos está sendo passada indefinidamente.');
+        } else if (!canal.trim() || canal === undefined || canal.length < 1 || canal === '') {
+          console.log('Canal está sendo passado indefinidamente.');
+        } else if (!plataforma.trim() || plataforma === undefined || plataforma.length < 5 || plataforma === '') {
+          console.log('Plataforma está sendo passada indefinidamente.');
+        } else if (!categoriaConteudo.trim() || categoriaConteudo === undefined || categoriaConteudo.length < 1 || categoriaConteudo === '') {
+          console.log('Categoria do conteúdo está sendo passada indefinidamente.');
         }
 
         else {
             const newNote = new dataSchema({
-                nome: nome,
-                quantiaInscritos: quantiaInscritos,
-                canal: canal,
-                plataforma: plataforma,
-                categoriaConteudo: categoriaConteudo,
-                _id: new mongoose.Types.ObjectId()
+                _id: new mongoose.Types.ObjectId(),
+                nome,
+                quantidadeInscritos,
+                canal,
+                plataforma,
+                categoriaConteudo,
+    
             })
 
             const savedNote = await newNote.save()
