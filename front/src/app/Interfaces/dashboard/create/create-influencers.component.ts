@@ -1,6 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
-import { Router } from '@angular/router';
 import { ServicesService } from 'src/app/services/services.service';
 
 @Component({
@@ -8,48 +7,53 @@ import { ServicesService } from 'src/app/services/services.service';
   templateUrl: './create-influencers.component.html',
   styleUrls: ['./create-influencers.component.css']
 })
-export class CreateInfluencersComponent {
+export class CreateInfluencersComponent implements OnInit {
   cadastroForm: FormGroup;
 
   constructor(
     private formBuilder: FormBuilder,
-    private router: Router,
     private cadastroService: ServicesService
-  ){
+  ) {
     this.cadastroForm = this.formBuilder.group({
       nome: ['', Validators.required],
-      quantidadeInscritos:['', Validators.required],
-      canal:['', Validators.required],
-      plataforma:['', Validators.required],
-      categoria:['', Validators.required]
-
-    })
-
+      quantidadeInscritos: ['', Validators.required],
+      canal: ['', Validators.required],
+      plataforma: ['', Validators.required],
+      categoria: ['', Validators.required]
+    });
   }
+
+  ngOnInit() {}
+
   cadastrarPessoa() {
     if (this.cadastroForm.valid) {
-      const personData = this.cadastroForm.value;
+      const formValue = this.cadastroForm.value;
+  
+      const personData = {
+        nome: formValue.nome,
+        canal: formValue.canal,
+        categoriaConteudo: formValue.categoria,
+        plataforma: formValue.plataforma,
+        quantidadeInscritos: formValue.quantidadeInscritos,
+        __v: 0, // Valor fixo para __v
+        _id: null // Valor nulo para _id, pois a API atribuirá um valor automaticamente
+      };
+  
       this.cadastroService.createPerson(personData).subscribe(
-        (response) => {
+        (data: any) => {
           // Sucesso no cadastro
-          console.log(response);
+          console.log('Cadastro realizado com sucesso:', data);
+          // Faça o que você precisa com os dados retornados, como redirecionar para a página de sucesso
         },
-        (error) => {
+        (error: any) => {
           // Tratamento de erro
-          console.error(error);
+          console.error('Erro ao cadastrar pessoa:', error);
+          // Faça o tratamento adequado para exibir uma mensagem de erro ou tomar outras ações necessárias
         }
       );
     } else {
       console.log('Formulário inválido');
     }
   }
-
-  fazerLogin() {
-    this.router.navigate(['/login']);
-  }
-
-  voltarPagina() {
-    this.router.navigate(['/']);
-  }
-
+  
 }
