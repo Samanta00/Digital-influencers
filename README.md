@@ -3,10 +3,7 @@
 
 A página oferece recursos para listar, filtrar e editar os influenciadores cadastrados.
 
-### Link Do Projeto no Vercek: https://digital-influencers-qjvh.vercel.app/
-
 para executar o projeto você deve exporta-lo do github da seguinte maneira, após entrar no meu github e encontrar o projeto de interesse clique nesse opção
-
 ![baixando](https://github.com/Samanta00/Digital-influencers/assets/80990432/c8e8d296-bedf-4f82-ab8b-3aebab032bea)
 
 copie esse link de https e execute no seu terminal com um:
@@ -53,6 +50,11 @@ Para ter acesso ao seu login, utilize as seguintes informações
 
 ### Não se esqueça de ajustar o raw
 ![raw](https://github.com/Samanta00/Digital-influencers/assets/80990432/70aa49a5-e91f-4e65-9f81-38fca66364a7)
+
+
+### Não se esqueça de configurar seu arquivo .env para que ele receba uma secret e o link do banco de dados
+uma das formas é fazer a criar um arquivo .env, aqui está o exemplo:
+![secret](https://github.com/Samanta00/Digital-influencers/assets/80990432/92a7a3a4-68a7-4859-9378-3aaf9ff6a1cb)
 
 
  ## Otimo, agora você tem as permissões para acessar todas as rotas
