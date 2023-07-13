@@ -33,11 +33,11 @@ describe("teste de rotas", () => {
         const response = await superTest(app).post("/customers")
 
             .send({
-                nome: 'Samanta',
-                email: 'Ellen.samanta@outlook.com',
-                telefone: '81981311245',
-                endereco: 'rua mergulhador roberto uchoa',
-                cpf: '45139845125'
+                nome:"marcio daniel",
+                quantidadeInscritos:5,
+                canal:"guto tv",
+                plataforma:"youtube",
+                categoriaConteudo:"vlog"
             }).set('authorization', 'Bearer ' + token)
         expect(response.statusCode).toEqual(201)
     })
@@ -46,11 +46,11 @@ describe("teste de rotas", () => {
         const response = await superTest(app)
             .post("/customers/")
             .send({
-                nome: 'Samanta',
-                email: 'Ellen.samanta@outlook.com',
-                telefone: '81981311245',
-                endereco: 'rua mergulhador roberto uchoa',
-                cpf: '5652398420'
+                nome:"marcio daniel",
+                quantidadeInscritos:5,
+                canal:"guto tv",
+                plataforma:"youtube",
+                categoriaConteudo:"vlog"
             })
         expect(response.statusCode).toEqual(401)
     })
@@ -58,11 +58,12 @@ describe("teste de rotas", () => {
     test("PUT - Método para atualizar cadastro da api com usuário Autenticado", async () => {
         const pessoa = {
             id: 1,
-            nome: 'Samanta',
-            email: 'Ellen.samanta@outlook.com',
-            telefone: '81981311245',
-            endereco: 'rua mergulhador roberto uchoa',
-            cpf: '5652398420'
+            nome:"marcio daniel",
+            quantidadeInscritos:5,
+            canal:"guto tv",
+            plataforma:"youtube",
+            categoriaConteudo:"vlog"
+   
         }
 
         superTest(app)
@@ -85,11 +86,11 @@ describe("teste de rotas", () => {
     test("DELETE - Método para deletar cadastro da api com usuário autenticado", async () => {
         const pessoa = {
             id: 1,
-            nome: 'Samanta',
-            email: 'Ellen.samanta@outlook.com',
-            telefone: '81981311245',
-            endereco: 'rua mergulhador roberto uchoa',
-            cpf: '5652398420'
+            nome:"marcio daniel",
+            quantidadeInscritos:5,
+            canal:"guto tv",
+            plataforma:"youtube",
+            categoriaConteudo:"vlog"
         }
 
         superTest(app)
