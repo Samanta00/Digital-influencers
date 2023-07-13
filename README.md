@@ -3,6 +3,8 @@
 
 A página oferece recursos para listar, filtrar e editar os influenciadores cadastrados.
 
+### LINK DO PROJETO NO VERCEL: https://digital-influencers-qjvh.vercel.app/
+
 para executar o projeto você deve exporta-lo do github da seguinte maneira, após entrar no meu github e encontrar o projeto de interesse clique nesse opção
 ![baixando](https://github.com/Samanta00/Digital-influencers/assets/80990432/c8e8d296-bedf-4f82-ab8b-3aebab032bea)
 
