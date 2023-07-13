@@ -1,6 +1,6 @@
 # Página de Influenciadores
 ## Este é um projeto de uma página de influenciadores, onde os usuários podem gerenciar todas as informações ou apenas analisarem.
-
+### esse projeto está diponível no vercel com o seguinte link: https://digital-influencers-qjvh.vercel.app/
 A página oferece recursos para listar, filtrar e editar os influenciadores cadastrados.
 
 para executar o projeto você deve exporta-lo do github da seguinte maneira, após entrar no meu github e encontrar o projeto de interesse clique nesse opção
