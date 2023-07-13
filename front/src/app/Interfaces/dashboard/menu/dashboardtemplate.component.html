@@ -1,10 +1,10 @@
+<!-- Apenas Ellen poderá visualizar essas interfaces -->
 <ng-container *ngIf="isEllenUser; else carlosUser">
-    <app-create-influencers></app-create-influencers>
-    <app-list-influencers></app-list-influencers>
+  <app-create-influencers></app-create-influencers>
+  <app-list-influencers></app-list-influencers>
+</ng-container>
 
-  </ng-container>
-  
-  <ng-template #carlosUser>
-    <app-list-influencers></app-list-influencers>
-  </ng-template>
-  
+<!-- Carlos visualizará apenas essas interfaces -->
+<ng-template #carlosUser>
+  <app-list-influencers></app-list-influencers>
+</ng-template>
