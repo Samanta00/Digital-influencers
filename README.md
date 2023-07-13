@@ -30,6 +30,8 @@ Feito isso executará o projeto executará em seu navegador pelo link que exibir
 ![filtro](https://github.com/Samanta00/Digital-influencers/assets/80990432/8b84955d-b774-4c87-9c37-8385c291c85c)
 ![lista](https://github.com/Samanta00/Digital-influencers/assets/80990432/b18afcd9-dc98-40c0-a9b3-783e04a0e00c)
 
+Atenção: Após cada ação de criar, deletar ou editar você deve recarregar a página para ver as mudanças, ou abrir o console para ver que está funcionando
+
 ### Caso acesse o login sem as permissões você terá acesso a essa interface
 ![semPermissao](https://github.com/Samanta00/Digital-influencers/assets/80990432/1b89f199-2cca-4bbf-9548-7633a878e7a6)
 
