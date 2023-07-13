@@ -14,6 +14,7 @@ export class DashboardtemplateComponent {
     this.checkUser();
   }
 
+  //altoriza apenas para login em específico
   checkUser() {
     const email = this.authService.getEmail();
     this.isEllenUser = email === 'ellen.samanta@outlook.com';
