@@ -9,17 +9,13 @@ import { Router } from '@angular/router';
 export class PageComponent {
   constructor(private router: Router) {}
 
-  irParaCadastro() {
-    // Lógica para navegar para a página de cadastro
-    this.router.navigate(['/register']);
-  }
 
   irParaLogin() {
     // Lógica para navegar para a página de login
     this.router.navigate(['/login']);
   }
-  editarInfluenciador(){
 
-  }
+
+
 
 }
