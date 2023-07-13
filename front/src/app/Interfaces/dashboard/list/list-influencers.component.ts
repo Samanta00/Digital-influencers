@@ -139,12 +139,14 @@ export class ListInfluencersComponent implements OnInit {
     );
   }
 
+  //autoriza apenas para o login em específico
   isUserAuthorized(): boolean {
     const nome = this.authService.getEmail();
     const senha = this.authService.getSenha();
     return nome === 'ellen.samanta@outlook.com' && senha === '123';
   }
 
+  //chega os logins permitidos
   checkUser() {
     const email = this.authService.getEmail();
     this.isEllenUser = email === 'ellen.samanta@outlook.com';
